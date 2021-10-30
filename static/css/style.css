@@ -1,0 +1,187 @@
+.header-banner{
+    width: 720px;
+    height: 240px;
+    padding: 5px;
+    position: relative;
+
+    margin-bottom: 10px;
+
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.header-banner img{
+    position: absolute;
+    width: 720px;
+    opacity: 50;
+}
+
+.desktop{
+   position: relative;
+    width: 720px;
+    height: 600px;
+    padding: 5px;
+    position: relative;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: rgba(143, 136, 136, 0.192);
+    border-radius: 5px;
+ 
+    /*outline: 1px solid slateblue;*/
+}
+
+.input_cadastro{
+   /* position: absolute;*/
+    width: 100%;
+}
+
+.input_box{
+    margin: 10px 5px;
+    height: 25px;
+    border-radius: 5px; 
+    border-style: none; 
+    font-weight: bold; 
+}
+
+.input_box:focus{
+    background-color: rgb(209, 209, 209);
+    border-style: none; 
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#input_id, #input_name{
+    width: 96%;
+}
+
+#input_owner, #input_price{
+    display: inline;
+    width: 47%;  
+}
+
+
+.submit_for_db{    
+    margin-top: 10px;
+    text-align: center;   
+}
+.submit_for_db button{
+    display: inline-block;
+}
+
+.button_submit{
+   
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit_for_db #create{
+    background-color: green;
+}
+.submit_for_db #read{
+    background-color: blue;
+}
+.submit_for_db #update{
+    background-color: orange;
+}
+.submit_for_db #delete{
+    background-color: red;
+}
+
+.submit_for_db #delete_all{
+    background-color: rgb(71, 6, 6);
+}
+
+.querry_results{
+   /*outline: 2px solid gold;*/
+    width: 100%;
+    margin-top: 10px;
+}
+
+.querry_results, tr, th, td{
+
+    border: 1px solid darkgray;
+ 
+}
+
+.querry_results tr th{
+    padding-left: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.querry_results tr td{
+    padding-left: 5px;
+}
+
+.querry_results tr td button img{
+    padding-left: 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/*
+.alert_popup{
+    position: absolute;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    box-shadow: none;
+    
+    width: auto;
+    height: 200px;
+
+    top: 100px;
+    right: 25%;
+    bottom: 0;
+    left: 25%;
+    content: '';
+
+}
+
+.alert_popup img{
+    width: 68px;
+    height: 68px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.alert_popup .alert_msn{
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    outline: 1px solid tomato ;
+    text-align: center;
+}
+
+.alert_popup .button_ok_popup{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    outline: 1px solid tomato ;
+    text-align: center;
+
+*/
+

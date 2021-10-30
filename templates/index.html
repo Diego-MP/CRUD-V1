@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="refresh" content="200" >
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../static/images/tab.ico">
+    
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+
+
+    <!--<script type="text/javascript" src="../static/js/script.js"></script>-->
+    <!--<script type="text/javascript" src="../static/js/script.js" defer></script>   so carrega apos carregar o html-->
+
+    
+    <title>CRUD in FLASK</title>
+</head>
+<body>
+    <header>
+        <div class = "header-banner">
+            <img src="../static/images/logo" alt="LOGO">
+        </div>
+    </header>
+
+  
+
+    <section class = "desktop">
+
+        <form action="" method="GET">
+
+            <section class="input_cadastro">
+
+                <div>
+                    <input type="text" class = "input_box" id = "input_id" 
+                           name = "input_id" placeholder="Código do Produto: {{proximo_id}}" value="{{read_id}}">
+
+                    <input type="text" class = "input_box" id = "input_name" name = "input_name" placeholder="Nome do Produto" value = "{{read_name}}">
+                
+                    <input type="text" class = "input_box" id = "input_owner" name = "input_owner" placeholder="Fabricante" value = "{{read_owner}}">
+                
+                    <input type="text" class = "input_box" id = "input_price" name = "input_price" placeholder="Preço" value = "{{read_price}}">
+                </div>  
+
+            </section>            
+
+            <section class = "submit_for_db">
+            
+                <div>
+                    <button type="submit" class = "button_submit" id = "create" name="btn_create" value="Create">Create</button>
+
+                    <button type="submit" class = "button_submit" id = "read" name="btn_read" value="Read">Read</button>
+
+                    <button type="submit" class = "button_submit" id = "update"  name="btn_update" value="Update">Update</button>
+
+                    <button type="submit" class = "button_submit" id = "delete"  name="btn_delete" value="Delete">Delete</button>
+
+                    <button type="submit" class = "button_submit" id = "delete_all"  name="btn_delete_all" value="Delete All">Delete All</button>
+                </div>
+
+            </section>
+
+        </form>
+       
+        <hr>
+        <section>
+            <form action="" method="GET">
+            <table class="querry_results">
+                <tr>
+                    <th>Id</th>
+                    <th>Produto</th>
+                    <th>Vendedor</th>
+                    <th>Preço</th>
+                    <th>Editar</th>
+                    <th>Delete</th>
+                </tr>
+                
+                {% for i in range(linhas_banco)%}
+                
+                <tr>
+                    <td>{{list_banco[i]['id']}}</td>
+                    <td>{{list_banco[i]['name']}}</td>
+                    <td>{{list_banco[i]['owner']}}</td>
+                    <td>R$ {{list_banco[i]['price']}}</td>
+                    
+                        <td><button  name = "edit_item" value = "Edit_Prod:{{list_banco[i]['id']}}:"><img src="../static/images/edit_icon.png" alt=""></button></td>
+                        <td><button  name = "delete_item" value = "Delete_Prod:{{list_banco[i]['id']}}:"><img src="../static/images/delete_icon.png" alt=""></button></td>
+                   
+                </tr>
+                
+                {% endfor %}
+
+            
+               
+            </table>
+        </form>
+
+            <hr>
+
+
+                
+
+        
+<!--Linha a linha gerar uma tabela com jinja-->
+            
+           
+<!-- jinja2
+        {% block alert_popup%}
+        {% endblock %}
+jinja2-->
+    </section>
+
+
+</body>
+
+</html>
